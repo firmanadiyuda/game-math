@@ -3,6 +3,7 @@ package backend;
 import frontend.*;
 import java.util.Scanner;
 
+// Class Penjumlahan dengan teknik INHERITANCE
 public class Penjumlahan extends Soal {
     
     // Atribut.
@@ -87,6 +88,13 @@ public class Penjumlahan extends Soal {
             
         }
 
+        endGame(player);
+
+    }
+
+
+    // Method OVERRIDE
+    public static void endGame(Player player) {
         if (player.getNyawa() <= 0) {
             View.tampilanNyawaHabis(player);
             sc.nextLine();
@@ -98,8 +106,6 @@ public class Penjumlahan extends Soal {
             
             View.tampilanMenu(player);
         }
-
     }
 
-  
 }

@@ -3,6 +3,7 @@ package backend;
 import frontend.*;
 import java.util.Scanner;
 
+// Class Pengurangan dengan teknik INHERITANCE
 public class Pengurangan extends Soal {
     
     // Atribut.
@@ -91,19 +92,23 @@ public class Pengurangan extends Soal {
             
         }
 
+        endGame(player);
+
+    }
+
+    // Method OVERRIDE.
+    public static void endGame(Player player) {
         if (player.getNyawa() <= 0) {
             View.tampilanNyawaHabis(player);
             sc.nextLine();
             
             View.tampilanMenu(player);
         } else {
-            View.tampilanBerhasilPengurangan(player);
+            View.tampilanBerhasilPenjumlahan(player);
             sc.nextLine();
             
             View.tampilanMenu(player);
         }
-
     }
-
   
 }
